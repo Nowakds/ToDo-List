@@ -1,3 +1,7 @@
+{% extends 'base/main.html' %}
+{% block content %}
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,7 +36,6 @@
         {% for task in tasks %}
         <tr>
             <td>{{task.title}}</td>
-            <td><a href="{% url 'task' task.id %}">View</a></td>
             <td><a href="{% url 'task-update' task.id %}">Edit</a></td>
             <td><a href="{% url 'task-delete' task.id %}">Delete</a></td>
         </tr>
@@ -43,3 +46,5 @@
 
 </body>
 </html>
+
+{% endblock content %}
